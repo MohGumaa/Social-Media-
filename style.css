@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Genericons";
+  src: url("fonts/genericons-regular-webfont.woff") format("woff"),
+    url("fonts/genericons-regular-webfont.woff") format("woff");
+}
+
+.container {
+  margin: 50px auto;
+  width: 90%;
+}
+
+header h1 {
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.accordion {
+  background: #333;
+  width: 100%;
+  min-width: 800px;
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  height: 200px;
+  font-size: 0;
+}
+
+.tab {
+  display: inline-block;
+  background: #444;
+  border-right: #333 solid 1px;
+  width: 80px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+.tab:hover {
+  width: 450px;
+}
+
+.tab:hover .socail a::before {
+  margin-left: -100px;
+}
+
+.tab:hover .socail a::after {
+  margin-left: -5px;
+}
+
+.content {
+  background: #fff;
+  width: 360px;
+  height: 200px;
+  margin-left: 80px;
+  position: relative;
+  padding: 50px 0 0 15px;
+}
+
+.tab .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.tab .content p {
+  font-size: 0.85rem;
+  line-height: 1.4px;
+  padding-right: 30px;
+}
+
+.socail a::before,
+.socail a::after {
+  width: 80px;
+  height: 200px;
+  position: absolute;
+  text-indent: 0;
+  padding-top: 90px;
+  padding-left: 25px;
+  display: block;
+  font: normal 30px Genericons;
+  color: #fff;
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+.socail a::after {
+  font-size: 49px;
+  padding-top: 80px;
+  padding-left: 20px;
+  margin-left: 85px;
+}
+
+/* Add Icons */
+.youtude a:before,
+.youtude a:after {
+  content: "\f213";
+}
+
+.youtude a:after {
+  background: #ff0000;
+}
+
+.fb a:before,
+.fb a:after {
+  content: "\f204";
+}
+
+.fb a:after {
+  background: #3b5998;
+}
+.twitter a:before,
+.twitter a:after {
+  content: "\f202";
+}
+
+.twitter a:after {
+  background: #6dc5dd;
+}
+.github a:before,
+.github a:after {
+  content: "\f200";
+}
+
+.github a:after {
+  background: #6e5494;
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: 70%;
+  }
+  .tab {
+    display: block;
+    width: 100%;
+    border-bottom: 3px #333 solid;
+  }
+
+  .accordion {
+    display: block;
+    min-width: 440px;
+    height: auto;
+  }
+
+  .tab .content {
+    width: 80%;
+  }
+  .tab .content:hover {
+    width: 100%;
+  }
+}
+
+@media (max-width: 956800px) {
+  .container {
+    width: 95%;
+  }
+
+  .accordion {
+    width: 100%;
+    min-width: 350px;
+  }
+}
